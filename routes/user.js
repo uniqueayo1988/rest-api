@@ -3,7 +3,10 @@ var express = require('express'),
   logger = require('../logger/logger'),
   app = express()
 
-const users = [{firstname: "Dele", lastName: "Adigun", userName: "deleA"}]
+const users = [
+  {firstname: "Dele", lastName: "Adigun", userName: "deleA"},
+  {firstname: "John", lastName: "Wick", userName: "johnW"}
+]
 
 app.get('/users', (req, res) => {
   res.json(users)
