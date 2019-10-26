@@ -12,7 +12,10 @@ app.get('/', (req, res) => {
 
 app.use('/api', require('./routes/routes'))
 
-
+app.use('*', (req, res) => {
+  logger.info('users undefined route')
+  res.send('Please, check your route')
+})
 
 app.listen(port, (err) => {
   // console.log('running server on from port:::::' + port)
