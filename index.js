@@ -19,5 +19,5 @@ app.use('*', (req, res) => {
 
 app.listen(port, (err) => {
   // console.log('running server on from port:::::' + port)
-  logger.info('running server on from port:::::' + port)
+  logger.info('running server on from port::: ' + port)
 })
