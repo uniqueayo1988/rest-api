@@ -4,8 +4,9 @@ var express = require('express'),
   app = express()
 
 const users = [
-  {firstname: "Dele", lastName: "Adigun", userName: "deleA"},
-  {firstname: "John", lastName: "Wick", userName: "johnW"}
+  {id: 1, firstname: "Dele", lastName: "Adigun", userName: "deleA"},
+  {id: 2, firstname: "John", lastName: "Wick", userName: "johnW"},
+  {id: 2, firstname: "Smith", lastName: "Lot", userName: "smithL"}
 ]
 
 app.get('/users', (req, res) => {
