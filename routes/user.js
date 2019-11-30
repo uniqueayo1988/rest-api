@@ -25,8 +25,15 @@ app.get('/users/:userName', (req, res) => {
 })
 
 app.post('/user', (req, res) => {
-  user.push(req.body)
-  res.json(users)
+  const id = users.length + 1
+  const createdDate = Date.now().toString()
+  const newUser = req.body
+  users.push({
+    ...newUser,
+    id,
+    createdDate
+  })
+  res.status(201).json(users)
 })
 
 module.exports = app

@@ -5,6 +5,7 @@ const app = express()
 const port = 3070
 
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
 
 app.get('/', (req, res) => {
   res.send('This App is Working...')
